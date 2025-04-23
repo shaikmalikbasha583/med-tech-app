@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th colspan="4"><h2 class="text-center">Clinical Branches</h2></th>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Short Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for branch in data['clinical'] %}
+                        <tr>
+                            <td>{{ branch['id'] }}</td>
+                            <td>{{ branch['name'] }}</td>
+                            <td>{{ branch['short_name'] }}</td>
+                            <td>{{ branch['description'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th colspan="4"><h2 class="text-center">Non-Clinical Branches</h2></th>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Short Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for branch in data['non_clinical'] %}
+                        <tr>
+                            <td>{{ branch['id'] }}</td>
+                            <td>{{ branch['name'] }}</td>
+                            <td>{{ branch['short_name'] }}</td>
+                            <td>{{ branch['description'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

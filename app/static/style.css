@@ -1,0 +1,26 @@
+/*Custom CSS Code*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    flex: 1;
+    display: flex;
+}
+.sidebar {
+    min-width: 200px;
+    max-width: 250px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+.content {
+    flex: 1;
+    padding: 1.5rem;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
