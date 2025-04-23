@@ -1,3 +1,5 @@
+import logging
+
 from flask import Flask, render_template
 
 from app.data.branches import data
@@ -10,6 +12,7 @@ def create_app():
 
     @app.route("/")
     def index():
+        logging.info("Returning Home Page")
         return render_template("index.html", data=data)
 
     # db.init_app(app)
